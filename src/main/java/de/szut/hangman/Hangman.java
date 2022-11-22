@@ -1,10 +1,10 @@
-package de.szut.gallowsman;
+package de.szut.hangman;
 
-public class Gallowsman {
+public class Hangman {
     private String wordToGuess;
     private StringBuffer actualGuessed= new StringBuffer();
 
-    public Gallowsman(String wantedWord){
+    public Hangman(String wantedWord){
         this.wordToGuess = wantedWord;
         getWordInUnderscores();
     }

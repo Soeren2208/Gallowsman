@@ -31,14 +31,14 @@ wie das Überspringen der Verzweigung und der Schleife bei unwahren boolschen Be
 reicht ein Testfall aus, der ggt mit number1 = 20 und number2 = 45 (im Folgenden ggt(20, 45)) aufruft, um eine 100%ige Anweisungsüberdeckung zu 
 erreichen. 
 
-Die Anweisungsüberdeckung ist ein schwaches Testverfahren, mit dem nur 18% der Fehler gefunden werden. In jedem Fall identifiziert es Code,
+Die Anweisungsüberdeckung ist ein schwaches Testverfahren, mit dem nur ca. 18% der Fehler gefunden werden. In jedem Fall wird Code identifiziert ,
 der niemals ausgeführt wird, wie zum Beispiel den Code einer Verzweigung, der niemals ausgeführt wird, weil die die dafür nötige Bedingung
 niemals eintritt. Als einziges Testverfahren ist sie also nicht hinreichend, in Kombination mit anderen Testverfahren aber durchaus nützlich. 
 
 ###Zweigabdeckung (Branch Coverage)
 Bei vollständiger **Zweigabdeckung**  wird jeder Zweig einer Anwendung mindestens einmal durlaufen: z.B. einmal if und einmal else oder einmal
 while und einmal nicht while. In unserem Beispiele reichen dazu zwei Testfälle: ggt(20, 45) sorgt dafür, dass der Zweig der true-Zweig der If-Anweisung 
-sowie der Schleifenkörper ausgeführt werden. ggt(30, 10) führt dazu, dass sowohl die Bedingung der if-Anweisung (10 ist nicht größer als 30) sowie
+sowie der Schleifenkörper ausgeführt werden. ggt(30, 10) führt dazu, dass sowohl die Bedingung der If-Anweisung (10 ist nicht größer als 30) sowie
 die Schleifenbedingung nicht erfüllt ist (30 % 10 ist 0, so dass temp nicht ungleich 0 ist), so dass in beiden Fällen der Kontrollfluß
 abgewiesen wird. 
 
@@ -59,7 +59,7 @@ Außerdem kann es sein, dass ein Teil der konstruierbaren Pfade nicht ausführba
 Pfadabdeckung ist in der Praxis also selten erreichbar und daher eher ein theoretisches Vergleichsmaß. 
 
 Als praktikabel hat sich eine eingeschränkte Pfadüberdeckung mit dem Boundary Interior-Verfahren herausgestellt, bei dem Schleifen dreifach getestet werden: 
-kein Durchlauf, genau ein Durchlauf und mehrere Durchläufe. Für unser Beispiel hieße das folgende Pfade: 
+kein Durchlauf, genau ein Durchlauf und mehrere Durchläufe. Auf unser Beispiel bezogen sind folgende Pfade denkbar: 
 1. if-Anweisung und Schleife werden abgewiesen (ggt(30, 10),  
 2. if-Anweisung wird durchlaufen und Schleife weist ab (ggt(10, 30) 
 3. if-Anweisung und Schleife werden jeweils einmal durchlaufen (ggT(20, 45)), 
@@ -70,7 +70,7 @@ kein Durchlauf, genau ein Durchlauf und mehrere Durchläufe. Für unser Beispiel
 ###Bedingungsabdeckung (Condition Coverage) 
 Die Bedingungsabdeckung findet dort Anwendung, wo sich Bedingungen in Verzweigungen oder Schleifen aus mehreren Ausdrücken zusammensetzen, 
 wie zum Beispiel `if(a<10 || y>20)`. Die Bedingungsabdeckung erfordert, dass jede Bedingung und Teilbedingung mindestens einmal durchlaufen wird 
-und einmal true und einmal false ist. Da in unserem Beispiel keine komplexe Bedingung vorlommt wird hier auf eine Demostration verzichtet. 
+und einmal true und einmal false ist. Da in unserem Beispiel keine komplexe Bedingung vorkommt, wird hier auf eine Demonstration verzichtet. 
 
 
 Man merkt: um eine umfassende Testabdeckung zu bekommen, werden Kenntnisse über die Struktur des Quellcodes benötigt. Alle vier 

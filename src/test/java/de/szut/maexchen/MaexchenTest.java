@@ -26,10 +26,10 @@ public class MaexchenTest {
         Maexchen game = new Maexchen();
 
         //Act and Assert with assertEquals
-        assertEquals(1000, game.calculatePoints(2, 1));
+        assertEquals(1000, game.calculatePoints(1, 2));
     }
 
-    @ParameterizedTest(name="throw1={0}, throw2={1}, points")
+    @ParameterizedTest(name="throw1={0}, throw2={1}, points{2}")
     @CsvSource({"1, 1, 100", "2, 2, 200", "3, 3, 300", "4, 4, 400", "5, 5, 500", "6, 6, 600"})
     @DisplayName("Pasch")
     public void givenADoubletsWhenCalculatePointsThenScoreMultiplyWith100(int throw1, int throw2, int points){

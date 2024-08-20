@@ -10,23 +10,23 @@ Automatisierte Tests sind aus der Software-Entwicklung nicht mehr wegzudenken un
 Vor einem näheren Blick auf die Testpyramide werden zunächst die verschiedenen Testarten kurz vorgestellt. Zur besseren Einordnung werden die Tests anhand der verwendeten Testmethode und des Test-Levels bewertet. Mit Testmethode ist der Box-Ansatz gemeint (White-Box, Gray-Box, Black-Box), welcher den Blickwinkel beschreibt, der bei der Testentwicklung eingenommen wurde. Während beim White-Box-Test die Codestruktur bekannt ist, wird beim Black-Box-Test eine Außenperspektive eingenommen. Die Test-Level gehen hingegen auf den SWEBOK Guide der IEEE zurück und beziehen sich auf den Umfang des geprüften Codes in Unit-, Integration- und System-Tests.
 Tests können in JUnit 5 mit verschiedenen Assertions formuliert werden. 
 
-###Unit-Tests
+### Unit-Tests
 
 Mit Unit-Tests wird das Verhalten einzelner Komponenten – wie Klassen, Funktionen oder Methoden – überprüft, unter Berücksichtigung der inneren Funktionalität (White-Box-Test). Sie sind einfach zu erstellen und können sehr schnell durchgeführt werden. Ihre Ausführungszeiten liegen meist bei wenigen Millisekunden, selbst umfangreichere Tests dauern nicht länger als 1-2 Minuten.
 
-###Integrationstests
+### Integrationstests
 
 Integrationstests prüfen die Schnittstelle und das Zusammenspiel zwischen zwei Komponenten. Sie behandeln die zu testende Anwendung in der Regel als Black-Box (Black-Box-Test). Gelegentlich wird auch ein Gray-Box-Test eingesetzt, wenn neben dem Verhalten von Schnittstellen auch interne Abläufe überprüft werden sollen. Die Tests werden so realitätsnah wie möglich in einer produktionsähnlichen Laufzeitumgebung ausgeführt, was die Ausführungszeit deutlich erhöht.
 
-###Systemtests
+### Systemtests
 
 Der Fokus von Systemtests liegt auf dem Verhalten des gesamten Systems. Systemtests können daher als Oberbegriff für UI-Tests und End-to-End-Tests (E2E-Tests) verstanden werden. Da bei diesen Tests ausschließlich das externe Verhalten der Anwendung überprüft wird, handelt es sich um Black-Box-Tests.
 
-##Die Testpyramide von Mike Cohn
+## Die Testpyramide von Mike Cohn
 
 Die Testpyramide von Mike Cohn beschreibt ein Konzept zum Einsatz der genannten automatisierten Softwaretests. Die Pyramide besteht aus drei Leveln, aufgebaut nach Einsatzhäufigkeit und Relevanz. Sie ordnet also nicht nur ein, sondern bewertet Unit-Tests, Integrationstests und Systemtests auch. 
 
-![](./Die Testpyramide von Mike Cohn.jpg)
+![](./Die_Testpyramide_von_Mike_Cohn.jpg)
 
 Die breite Basis der Testpyramide bilden im Idealfall viele schnelle und einfach zu wartende Unit-Tests. So können die meisten Fehler schon in frühen Phasen der Entwicklung entdeckt werden. Auf dem mittleren Level befinden sich die Integrationstests. Sie leisten wertvolle Dienste bei der zielgerichteten Prüfung von kritischen Schnittstellen. Die Ausführungszeiten von Integrationstests sind länger und auch ihre Pflege ist aufwändiger als die von Unit-Tests.
 

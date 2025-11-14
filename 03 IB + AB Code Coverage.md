@@ -74,7 +74,7 @@ und einmal true und einmal false ist. Da in unserem Beispiel keine komplexe Bedi
 
 
 Man merkt: um eine umfassende Testabdeckung zu bekommen, werden Kenntnisse über die Struktur des Quellcodes benötigt. Alle vier 
-Testverfahren orientieren sich schließlich am Kontrollfluß des Programms, also darum, welche Anweisungen in welcher Reienfolge ausgeführt 
+Testverfahren orientieren sich schließlich am Kontrollfluß des Programms, also darum, welche Anweisungen in welcher Reihenfolge ausgeführt 
 werden. Tests, bei denen das nötig ist, heißen **White-Box-Tests**.
 
 ### Umsetzung in IntelliJ
@@ -85,13 +85,12 @@ wählt IntelliJ dabei die Anweisungsüberdeckung, die Zweigüberdeckung muss ext
 
 #### Aufgaben
 
+0. Öffne File - Settings - Build, Execution, Deployment - Coverage. Nimm dort das Häkchen vor Branch Coverage heraus.
 1. Öffne die Klasse `MaexchenTest`, klicke das Häkchen links neben der **Klassenbezeichnung** (um alle Tests und nicht nur einen auszuführen) mit 
 rechts an und wähle `Run 'MaexchenTest' with Coverage`. Nun werden die Tests ausgeführt. Das Ergebnis wird dir im rechten oberen Bereich angezeigt. 
 2. Wie erklärst du Dir, dass eine Anweisung nicht ausgeführt wird? Korrigiere den Quellcode so, dass du eine 100%ige Anweisungsabdeckung bekommst.
 3. Welche Tests wären für eine 100%ige Anweisungsüberdeckung notwendig, also welche(n) Test(s) kann/können gelöscht werden?
-4. Nun soll die Zweigabdeckung gemessen werden. Klicke wiederum das Häkchen links neben der Testklassenbezeichnung an und wähle 
-`Modify Run Configuration...` aus. Wähle im Konfigurationsfenster unten rechts im Bereich Code Coverage die Option `Modify` und
-dort `Use tracing` aus. 
+4. Nun soll die Zweigabdeckung gemessen werden. Setze dazu in den Settings das Häkchen vor Branch Coverage (siehe Aufgabe 0).
 5. Kontrolliere nun die Testabdeckung in beiden Varianten für deine Tests für die Klasse `Gallowsman`. Wie erklärst du dir das Ergebnis
 für die Anweisungsüberdeckung? Wie erklärst du dir die gelb markierten Zeilen bei der Zweigüberdeckung?
 6. Erzeuge eine 100%ige Anweisungs- und Zweigüberdeckung, indem du einen weiteren Test schreibst, der sicherstellt, dass `guessCharacter()` 
